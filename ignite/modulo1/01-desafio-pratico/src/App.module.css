@@ -1,0 +1,67 @@
+.container {
+  height: 100%;
+}
+
+.main {
+  background-color: var(--gray-600);
+  height: 100%;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+
+  padding: 0 calc(20% + 1vw);
+}
+
+.form {
+  display: inline-flex;
+  gap: 0.5rem;
+  width: 100%;
+  margin-top: calc(0px - 1.2rem - 6px);
+}
+
+.tasksContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  margin-top: 4rem;
+}
+
+.tasksContainerTitle {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  height: fit-content;
+
+  font-weight: 700;
+
+}
+
+.tasksContainerTitle span {
+  color: var(--gray-200);
+  background-color: var(--gray-400);
+
+  font-size: 0.75rem;
+
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.75rem;
+}
+
+.createdTaksText {
+  color: var(--blue);
+
+  gap: 0.5rem;
+  display: inline-flex;
+}
+
+.completedTasksText {
+  color: var(--purple);
+  font-weight: 700;
+
+  gap: 0.5rem;
+  display: inline-flex;
+}
+
