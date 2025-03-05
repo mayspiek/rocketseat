@@ -65,3 +65,18 @@
   display: inline-flex;
 }
 
+.noTasksFound {
+  color: var(--gray-300);
+  font-size: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 4rem 2rem;
+}
+
+.noTasksFound>p>span {
+  font-weight: 700;
+}

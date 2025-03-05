@@ -1,7 +1,16 @@
 import styles from './Input.module.css';
 
-export function Input() {
+interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
+  onChangeText: (value: string) => void;
+}
+
+export function Input({ onChangeText }: InputProps) {
   return (
-    <input className={styles.input} placeholder='Adicione uma nova tarefa' type="text" />
+    <input
+      onChange={(e) => onChangeText(e.target.value)}
+      name='task'
+      className={styles.input}
+      placeholder='Adicione uma nova tarefa'
+      type="text" />
   )
 }
