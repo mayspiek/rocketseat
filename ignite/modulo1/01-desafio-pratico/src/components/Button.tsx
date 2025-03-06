@@ -6,8 +6,7 @@ export function Button({ ...props }: ButtonHTMLAttributes<HTMLButtonElement>) {
   return (
     <button
       {...props}
-      className={styles.button}
-      type="submit">
+      className={styles.button}>
       Criar
       <PlusCircle size={16} weight="bold" />
     </button>

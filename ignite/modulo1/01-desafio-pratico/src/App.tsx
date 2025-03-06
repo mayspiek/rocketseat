@@ -53,7 +53,9 @@ function App() {
             name="newTask"
             onInvalid={handleEmptyInput}
             onChangeText={handleNewTaskChange} />
-          <Button disabled={isNewTaskEmpty} />
+          <Button
+            type="submit"
+            disabled={isNewTaskEmpty} />
         </form>
 
         <div className={styles.tasksContainer}>
