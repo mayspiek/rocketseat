@@ -10,15 +10,16 @@
   align-items: center;
 }
 
-.taskContainer svg {
+.taskContainer button {
   box-sizing: initial;
+  background-color: transparent;
   color: var(--gray-300);
   padding: 0.313rem;
   border-radius: 0.5rem;
   transition: all 0.2s;
 }
 
-.taskContainer svg:hover {
+.taskContainer button:hover {
   cursor: pointer;
   color: var(--danger);
   background-color: var(--gray-400);

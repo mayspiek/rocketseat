@@ -1,13 +1,14 @@
+import { ChangeEvent } from 'react';
 import styles from './Input.module.css';
 
 interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
-  onChangeText: (value: string) => void;
+  onChangeText: (event: ChangeEvent<HTMLInputElement>) => void;
 }
-
-export function Input({ onChangeText }: InputProps) {
+export function Input({ onChangeText, ...props }: InputProps) {
   return (
     <input
-      onChange={(e) => onChangeText(e.target.value)}
+      {...props}
+      onChange={onChangeText}
       name='task'
       className={styles.input}
       placeholder='Adicione uma nova tarefa'
