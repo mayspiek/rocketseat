@@ -45,7 +45,10 @@ function App() {
       <Header />
 
       <main className={styles.main}>
-        <form onSubmit={handleAddTask} className={styles.form} action="">
+        <form
+          onSubmit={handleAddTask}
+          className={styles.form}
+          action="">
           <Input
             required
             value={newTask}
@@ -75,11 +78,13 @@ function App() {
             </p>
           </div>
           {tasks.length > 0 ? tasks.map((task, index) => (
-            <Task
-              onCompleteTask={handleCompleteTask}
-              onDeleteTask={handleRemoveTask}
-              key={index}
-              task={task} />
+            <div className={styles.tasksItems}>
+              <Task
+                onCompleteTask={handleCompleteTask}
+                onDeleteTask={handleRemoveTask}
+                key={index}
+                task={task} />
+            </div>
           )) :
             <div className={styles.noTasksFound}>
               <Notepad size={32} />

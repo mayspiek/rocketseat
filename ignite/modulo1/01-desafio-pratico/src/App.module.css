@@ -65,6 +65,14 @@
   display: inline-flex;
 }
 
+.tasksItems {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  margin-top: 1rem;
+}
+
 .noTasksFound {
   color: var(--gray-300);
   font-size: 1rem;
@@ -79,4 +87,25 @@
 
 .noTasksFound>p>span {
   font-weight: 700;
+}
+
+@media screen and (max-width: 768px) {
+  .form {
+    flex-direction: column;
+  }
+
+  .form > .button {
+    margin-top: 0.5rem;
+    justify-content: center;
+  }
+
+  .tasksContainer {
+    margin-top: 1rem;
+  }
+
+  .tasksContainerTitle {
+    align-items: center;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
 }
